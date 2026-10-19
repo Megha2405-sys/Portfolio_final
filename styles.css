@@ -13,4 +13,6 @@
 @media(max-width:650px){.canvas-wrap{inset:25px 8px 35px}.scene-caption{left:12px;right:12px;font-size:7px}.hero-detail{font-size:13px;margin-top:-15px}}
 @media print{body{background:white!important}.resume-overlay{position:static;inset:auto;display:block;padding:0;background:white;overflow:visible}.resume-dialog{width:100%;max-height:none;overflow:visible;border:0;box-shadow:none;background:white}.resume-paper{width:100%;padding:0;margin:0}.resume-tools,.resume-actions,.site-header,main,.site-footer{display:none!important}@page{size:A4;margin:16mm}}
 .resume-band-actions{display:flex;align-items:center;gap:20px;flex-wrap:wrap}.resume-band-actions .button{white-space:nowrap}
+.resume-pdf-frame{display:block;width:100%;height:min(76vh,1000px);min-height:520px;border:0;background:#fff}
 @media(max-width:650px){.resume-band-actions{align-items:stretch;flex-direction:column;gap:8px}.resume-band-actions .button{width:100%;justify-content:space-between}}
+@media(max-width:650px){.resume-pdf-frame{height:72vh;min-height:440px}.resume-dialog{max-height:96vh}.resume-tools{padding:12px}}

@@ -13,6 +13,7 @@ function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [light, setLight] = useState(false);
   const [stage, setStage] = useState(0);
+  const [resumeOpen, setResumeOpen] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
 
   useEffect(() => {
@@ -26,6 +27,12 @@ function App() {
     document.body.classList.toggle('light', light);
     return () => document.body.classList.remove('light');
   }, [light]);
+  useEffect(() => {
+    if (!resumeOpen) return undefined;
+    const close = event => { if (event.key === 'Escape') setResumeOpen(false); };
+    window.addEventListener('keydown', close);
+    return () => window.removeEventListener('keydown', close);
+  }, [resumeOpen]);
   const contactItems = [
     profile.phone && { label: 'Phone', text: profile.phone, href: `tel:${profile.phone.replace(/[^\d+]/g, '')}` },
     profile.email && { label: 'Email', href: `mailto:${profile.email}` },
@@ -51,7 +58,7 @@ function App() {
           <h1 id="hero-title">Making sense of data.<br/><span>Making useful things.</span></h1>
           <p className="hero-intro">I’m Harshini, a Data Science student who likes figuring out how things work—and then making them easier to use.</p>
           <p className="hero-detail">Lately that means Python, data workflows, and the small decisions that turn a technical idea into something people can actually use.</p>
-          <div className="hero-actions"><a className="button button-primary" href="#work">TAKE A LOOK AROUND <span aria-hidden="true">↘</span></a><a className="button button-quiet" href="/meghana.pdf" target="_blank" rel="noreferrer">VIEW RESUME</a></div>
+          <div className="hero-actions"><a className="button button-primary" href="#work">TAKE A LOOK AROUND <span aria-hidden="true">↘</span></a><button className="button button-quiet" onClick={() => setResumeOpen(true)}>VIEW RESUME</button></div>
           <p className="hero-meta">B.TECH DATA SCIENCE <span>/</span> SRM AP <span>/</span> EXPECTED 2028</p>
         </div>
         <Suspense fallback={<div className="hero-visual scene-loading" aria-label="Loading computational study"/>}><HeroScene reducedMotion={reducedMotion}/></Suspense>
@@ -71,12 +78,14 @@ function App() {
 
       <section className="content-section education-section" id="education"><div className="section-index"><span>05</span><span>WHERE I’M LEARNING</span></div><div className="section-body"><p className="eyebrow">ONE STEP AT A TIME</p><h2>Grounded in data.<br/><span>Building toward software.</span></h2><div className="education-card"><div className="edu-date">2024 — 2028 <span>EXPECTED</span></div><div><h3>Bachelor of Technology, Data Science</h3><p>SRM University–Andhra Pradesh</p></div><div className="edu-mark">SRM<br/>AP</div></div></div></section>
 
-      <section className="resume-band" id="resume"><div><p className="eyebrow">A MORE TRADITIONAL VIEW</p><h2>Resume / PDF</h2><p>Download the resume or open it in a new tab.</p></div><div className="resume-band-actions"><a className="button button-primary" href="/meghana.pdf" download="Harshini-Meghana-Kotha-Resume.pdf">DOWNLOAD RESUME PDF</a><a className="button button-quiet" href="/meghana.pdf" target="_blank" rel="noreferrer">OPEN PDF</a></div></section>
+      <section className="resume-band" id="resume"><div><p className="eyebrow">A MORE TRADITIONAL VIEW</p><h2>Resume / PDF</h2><p>Download the resume or open it in a new tab.</p></div><div className="resume-band-actions"><a className="button button-primary" href="/meghana.pdf" download="Harshini-Meghana-Kotha-Resume.pdf">DOWNLOAD RESUME PDF</a><button className="button button-quiet" onClick={() => setResumeOpen(true)}>VIEW RESUME</button></div></section>
 
       <section className="contact-section" id="contact"><div className="section-index"><span>06</span><span>SAY HELLO</span></div><div className="contact-content"><p className="eyebrow">LET’S TALK ABOUT SOMETHING INTERESTING</p><h2>Let’s make something<br/><span>useful.</span></h2><p>I’m interested in software development, Python applications, data-driven products, and intelligent systems. If you’re working on an interesting problem or opportunity, I’d love to hear about it.</p>{contactItems.length ? <div>{contactItems.map(item=><a className="contact-link" key={item.label} href={item.href} target={item.href.startsWith('http')?'_blank':undefined} rel={item.href.startsWith('http')?'noreferrer':undefined}>{item.text ?? item.label}<span>↗</span></a>)}</div> : <span className="contact-link contact-link-muted">Contact details coming soon</span>}<p className="contact-hint">Phone, LinkedIn, GitHub, and portfolio links are listed in my resume.</p></div></section>
     </main>
     <footer className="site-footer"><Brand/><span>MADE WHILE LEARNING <i>·</i> © <span id="year"/></span><a href="#top">BACK TO TOP ↑</a></footer>
 
+
+    {resumeOpen && <div className="resume-overlay" role="presentation" onMouseDown={event => { if (event.target === event.currentTarget) setResumeOpen(false); }}><section className="resume-dialog" role="dialog" aria-modal="true" aria-labelledby="resume-dialog-title"><div className="resume-tools"><span id="resume-dialog-title">HARSHINI MEGHANA KOTHA / RESUME</span><button className="close-dialog" aria-label="Close resume" onClick={() => setResumeOpen(false)}>&times;</button></div><iframe className="resume-pdf-frame" src="/meghana.pdf#view=FitH" title="Harshini Meghana Kotha resume PDF"/><div className="resume-actions"><a className="button button-primary" href="/meghana.pdf" download="Harshini-Meghana-Kotha-Resume.pdf">DOWNLOAD RESUME PDF</a><a className="button button-quiet" href="/meghana.pdf" target="_blank" rel="noreferrer">OPEN IN NEW TAB</a></div></section></div>}
   </>;
 }
 
