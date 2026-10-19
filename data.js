@@ -22,6 +22,20 @@ export const skillGroups = [
 
 export const projects = [
   {
+    title: 'CipherSense AI — Secure Messaging & NLP-Based Privacy Analysis',
+    category: 'Python / Streamlit / scikit-learn / spaCy / AES-256-GCM',
+    status: 'Built',
+    description: 'A modular secure-messaging application that combines authenticated encryption with NLP-based privacy analysis and text-risk classification.',
+    details: [
+      'Uses AES-256-GCM encryption with Scrypt-based key derivation.',
+      'Detects personally identifiable information and supports optional redaction with spaCy NER and regular expressions.',
+      'Classifies text with TF-IDF and Logistic Regression, with Linear SVM and majority-class baselines for comparison.'
+    ],
+    note: 'Built for local demonstration.',
+    github: 'https://github.com/Mk230507/Cipher_Sense',
+    live: 'https://cipher-sense-hxdl.vercel.app/'
+  },
+  {
     title: 'Vox — Text-to-Speech Application',
     category: 'Python / Text-to-Speech',
     status: 'Built',
