@@ -25,3 +25,6 @@
 
 .project-actions{position:relative;z-index:1;display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-top:18px}.project-actions .project-repo-link{margin-top:0}
 @media(max-width:650px){.project-actions{gap:8px}.project-actions .button{width:100%;justify-content:space-between}}
+
+.project-live-link{display:inline-flex;align-items:center;gap:8px;margin-top:13px;color:var(--cyan);font:500 10px var(--mono);letter-spacing:.07em;position:relative;z-index:1}.project-live-link:hover{text-decoration:underline;text-underline-offset:4px}.project-live-link span{font-size:15px}
+
