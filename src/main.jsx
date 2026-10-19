@@ -37,8 +37,7 @@ function App() {
     profile.phone && { label: 'Phone', text: profile.phone, href: `tel:${profile.phone.replace(/[^\d+]/g, '')}` },
     profile.email && { label: 'Email', href: `mailto:${profile.email}` },
     profile.linkedin && { label: 'LinkedIn', href: profile.linkedin },
-    profile.github && { label: 'GitHub', href: profile.github },
-    profile.portfolio && { label: 'Portfolio', href: profile.portfolio }
+    profile.github && { label: 'GitHub', href: profile.github }
   ].filter(Boolean);
   const featuredProjects = projects.slice(0, 2);
 
