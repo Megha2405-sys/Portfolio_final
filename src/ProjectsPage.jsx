@@ -23,7 +23,10 @@ function ProjectsPage() {
           <p className="project-detail-description">{project.description}</p>
           <ul>{project.details.map(detail => <li key={detail}>{detail}</li>)}</ul>
           {project.note && <p className="project-detail-note">{project.note}</p>}
-          {project.github && <a className="button button-primary project-repo-link" href={project.github} target="_blank" rel="noreferrer">VIEW SOURCE ON GITHUB <span aria-hidden="true">↗</span></a>}
+          {(project.github || project.live) && <div className="project-actions">
+            {project.live && <a className="button button-primary project-repo-link" href={project.live} target="_blank" rel="noreferrer">OPEN LIVE DEMO <span aria-hidden="true">↗</span></a>}
+            {project.github && <a className="button button-quiet project-repo-link" href={project.github} target="_blank" rel="noreferrer">VIEW SOURCE ON GITHUB <span aria-hidden="true">↗</span></a>}
+          </div>}
         </article>)}
       </div>
       <p className="projects-page-outro">More project write-ups will be added here as they’re ready.</p>

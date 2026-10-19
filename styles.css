@@ -22,3 +22,6 @@
 .hero-introline{display:flex;align-items:center;gap:14px;margin:0 0 27px}.hero-introline .eyebrow{margin:0}.hero-avatar{display:block;flex:none;width:54px;height:54px;object-fit:cover;object-position:center 38%;border:1px solid var(--cyan);border-radius:50%;padding:2px;background:var(--bg)}
 @media(max-width:650px){.resume-band-actions{align-items:stretch;flex-direction:column;gap:8px}.resume-band-actions .button{width:100%;justify-content:space-between}}
 @media(max-width:650px){.resume-pdf-frame{height:72vh;min-height:440px}.resume-dialog{max-height:96vh}.resume-tools{padding:12px}.portrait-card{width:min(100%,340px);margin:0 auto}.hero-introline{gap:10px;margin-bottom:23px}.hero-avatar{width:44px;height:44px}.hero-introline .eyebrow{font-size:8px;letter-spacing:.04em}.hero-introline .pulse{margin-right:7px}}
+
+.project-actions{position:relative;z-index:1;display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-top:18px}.project-actions .project-repo-link{margin-top:0}
+@media(max-width:650px){.project-actions{gap:8px}.project-actions .button{width:100%;justify-content:space-between}}

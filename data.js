@@ -32,7 +32,8 @@ export const projects = [
       'Includes a browser app alongside the original Windows desktop application.'
     ],
     note: 'Speech is generated with Google Text-to-Speech and requires an internet connection.',
-    github: 'https://github.com/Mk230507/Text_to_speech'
+    github: 'https://github.com/Mk230507/Text_to_speech',
+    live: 'https://text-to-speech-meghna16.vercel.app/'
   },
   {
     title: 'Personality Prediction from Social Media Posts',
