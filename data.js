@@ -3,9 +3,11 @@ export const profile = {
   university: 'SRM University–Andhra Pradesh',
   degree: 'Bachelor of Technology in Data Science',
   period: '2024–2028',
+  phone: '+91 63019 90869',
   email: '',
-  linkedin: '',
-  github: '',
+  linkedin: 'https://www.linkedin.com/in/kothameghana2405/',
+  github: 'https://github.com/Mk230507',
+  portfolio: 'https://portfolio-final-cyan-rho.vercel.app/',
   summary: 'Aspiring Software Development Engineer and B.Tech Data Science student at SRM University–Andhra Pradesh, with hands-on project experience developing Python-based applications across backend systems, computer vision, and machine learning. Familiar with API-driven services, interactive data applications, and image-processing workflows. Building a foundation in programming, database management, data preprocessing, model development, and Git-based collaboration.'
 };
 

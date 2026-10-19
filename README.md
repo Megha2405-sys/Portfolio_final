@@ -22,7 +22,7 @@ npm run preview
 
 - Update profile, contact details, skills, pipeline stages, and verified project entries in `data.js`.
 - `projects` is intentionally empty until real project details are available; the page labels those spaces as work in progress.
-- The resume action opens a print-friendly view. Use the browser print dialog to save it as a PDF.
+- The supplied resume is served from `public/meghana.pdf` and linked from the hero and resume section.
 - The 3D scene respects reduced-motion preferences and includes a CSS fallback if WebGL cannot render.
 
 ## Deploy
