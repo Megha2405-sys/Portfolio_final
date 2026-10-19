@@ -4,7 +4,7 @@ export const profile = {
   degree: 'Bachelor of Technology in Data Science',
   period: '2024–2028',
   phone: '+91 63019 90869',
-  email: '',
+  email: 'meghanakotha235@gmail.com',
   linkedin: 'https://www.linkedin.com/in/kothameghana2405/',
   github: 'https://github.com/Mk230507',
   portfolio: 'https://portfolio-final-cyan-rho.vercel.app/',

@@ -35,7 +35,7 @@ function App() {
   }, [resumeOpen]);
   const contactItems = [
     profile.phone && { label: 'Phone', text: profile.phone, href: `tel:${profile.phone.replace(/[^\d+]/g, '')}` },
-    profile.email && { label: 'Email', href: `mailto:${profile.email}` },
+    profile.email && { label: 'Email', text: profile.email, href: `mailto:${profile.email}` },
     profile.linkedin && { label: 'LinkedIn', href: profile.linkedin },
     profile.github && { label: 'GitHub', href: profile.github }
   ].filter(Boolean);
