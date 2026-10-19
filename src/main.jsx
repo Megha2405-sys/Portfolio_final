@@ -54,7 +54,7 @@ function App() {
     </header>
     <main id="main">
       <section className="hero section-shell" aria-labelledby="hero-title">
-        <div className="hero-copy"><p className="eyebrow"><span className="pulse"/> DATA SCIENCE <i>·</i> SOFTWARE ENGINEERING <i>·</i> COMPUTER VISION</p>
+        <div className="hero-copy"><div className="hero-introline"><img className="hero-avatar" src="/harshini-meghana.jpg" alt="Portrait of Harshini Meghana Kotha" fetchPriority="high"/><p className="eyebrow"><span className="pulse"/> DATA SCIENCE <i>·</i> SOFTWARE ENGINEERING <i>·</i> COMPUTER VISION</p></div>
           <h1 id="hero-title">Making sense of data.<br/><span>Making useful things.</span></h1>
           <p className="hero-intro">I’m Harshini, a Data Science student who likes figuring out how things work—and then making them easier to use.</p>
           <p className="hero-detail">Lately that means Python, data workflows, and the small decisions that turn a technical idea into something people can actually use.</p>
