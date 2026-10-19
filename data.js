@@ -20,8 +20,32 @@ export const skillGroups = [
   { title: 'Tools & Systems', description: 'Tools for collaboration, reproducibility, and connected devices.', tags: ['Git', 'Docker', 'VS Code', 'Arduino', 'IoT systems'] }
 ];
 
-// Add verified work here. Empty entries are intentionally not presented as completed projects.
-export const projects = [];
+export const projects = [
+  {
+    title: 'Vox — Text-to-Speech Application',
+    category: 'Python / Text-to-Speech',
+    status: 'Built',
+    description: 'A text-to-speech application that turns typed or imported text into spoken audio, with controls for language and speech pace.',
+    details: [
+      'Accepts text typed into the app or imported from a file.',
+      'Lets people choose a language and adjust speech pace.',
+      'Includes a browser app alongside the original Windows desktop application.'
+    ],
+    note: 'Speech is generated with Google Text-to-Speech and requires an internet connection.',
+    github: 'https://github.com/Mk230507/Text_to_speech'
+  },
+  {
+    title: 'Personality Prediction from Social Media Posts',
+    category: 'Python / Machine Learning / NLP',
+    status: 'Proposed',
+    description: 'A proposed project exploring how natural language processing could classify social media text into personality categories.',
+    details: [
+      'Planned workflow includes text preprocessing, feature extraction, and model evaluation.',
+      'The resume presents this as a proposal, so it is not listed as a completed implementation.'
+    ],
+    note: 'Project proposal; implementation details and results have not been provided yet.'
+  }
+];
 
 export const pipeline = [
   { title: 'Input layer', purpose: 'Receives information from a user, file, device, or another service. Defining input clearly helps the rest of a system work with predictable data.', tools: ['Python', 'Arduino', 'IoT systems'] },
