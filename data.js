@@ -37,13 +37,13 @@ export const projects = [
   {
     title: 'Personality Prediction from Social Media Posts',
     category: 'Python / Machine Learning / NLP',
-    status: 'Proposed',
-    description: 'A proposed project exploring how natural language processing could classify social media text into personality categories.',
+    status: 'Built',
+    description: 'A completed project exploring personality prediction from social media posts. A fuller write-up and source link will be added once the project details are available.',
     details: [
-      'Planned workflow includes text preprocessing, feature extraction, and model evaluation.',
-      'The resume presents this as a proposal, so it is not listed as a completed implementation.'
+      'Project implementation is complete.',
+      'More technical details and a source link will be added later.'
     ],
-    note: 'Project proposal; implementation details and results have not been provided yet.'
+    note: 'Project details and repository link to follow.'
   }
 ];
 
