@@ -31,3 +31,7 @@
 
 .project-live-pending{display:block;margin-top:13px;color:var(--dim);font:10px var(--mono);letter-spacing:.06em}.project-demo-pending{display:inline-flex;align-items:center;min-height:56px;padding:0 20px;border:1px solid var(--line);color:var(--dim);font:500 10px var(--mono);letter-spacing:.06em}
 
+
+.project-detail-card h3{position:relative;z-index:1;max-width:750px;margin:32px 0 15px;font:500 clamp(2rem,4.4vw,3.8rem)/1.06 var(--display);letter-spacing:-.055em}
+@media(max-width:700px){.project-detail-card{padding:24px 20px}.project-detail-top{align-items:flex-start;font-size:9px}.project-detail-card:after{width:190px;height:190px;right:-115px;top:130px}.project-detail-description{font-size:16px}}
+
